@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<style>
+body{background-color:#7fffd4}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Login</title>
+</head>
+<h:body>
+<h:form>
+<h:commandButton value="Log out" action="#{loginAdminBean.logout}"/></h:form>
+<span style="float:right;"><h:link value="Logout" outcome="loginadmin" style="text-align: right;"/></span>
+<h1>Welocme Admin</h1>
+</h:body>
+</html>

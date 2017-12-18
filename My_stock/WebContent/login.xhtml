@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<style>
+body{background-color:#7fffd4}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Login</title>
+</head>
+<h:body>
+	<h:form id="loginform">
+		<h:outputLabel value="Username:"/>
+		<h:inputText value="#{loginBean.username}"
+		required="true"
+               requiredMessage="Username shouldn't be empty"/><br/>
+		<h:outputLabel value="Password:"/>
+		<h:inputSecret value="#{loginBean.password}"
+		required="true"
+               requiredMessage="Password shouldn't be empty"/><br/>
+        <h:selectOneRadio value="#{loginBean.usertype}" required="true"
+               requiredMessage="Password shouldn't be empty">
+			<c:selectItem itemValue="user" itemLabel="User"/>
+			<c:selectItem itemValue="manager" itemLabel="Manager"/>
+		</h:selectOneRadio><br/>
+		<h:commandButton value="Submit" action="#{loginBean.login}"/>
+		</h:form>
+</h:body></html>

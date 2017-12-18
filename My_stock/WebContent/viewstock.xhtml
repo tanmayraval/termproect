@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsf/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Home</title>
+</head>
+<style>
+body{background-color:#7fffd4}
+</style>
+<h:body>
+<h:dataTable value="#{viewstockdao.viewstock}"  border="2">
+		<h:column>
+			<f:facet name="header">Stock Symbol</f:facet>
+				#{Viewstockdao.symbol}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Quantity</f:facet>
+				#{Viewstockdao.qty}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Price</f:facet>
+				#{Viewstockdao.price}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Amount</f:facet>
+				#{Viewstockdao.amt}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Action</f:facet>
+			<h:commandButton value="Sell"/>
+				
+		</h:column>
+			</h:dataTable>
+</h:body>
+</html>
